@@ -1,0 +1,12 @@
+#RPM BASED
+sudo yum install python3
+sudo yum install python3-pip
+sudo yum install python3-devel portaudio-devel
+
+# DEB BASED
+sudo apt-get install python3
+sudo apt-get install python3-pip
+sudo apt-get install python3-dev portaudio19-dev
+
+pip install SpeechRecognition
+pip install pyaudio
