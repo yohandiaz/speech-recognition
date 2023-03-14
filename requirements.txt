@@ -1,12 +1,8 @@
-#RPM BASED
-sudo yum install python3
-sudo yum install python3-pip
-sudo yum install python3-devel portaudio-devel
-
-# DEB BASED
-sudo apt-get install python3
-sudo apt-get install python3-pip
-sudo apt-get install python3-dev portaudio19-dev
-
-pip install SpeechRecognition
-pip install pyaudio
+certifi==2022.12.7
+charset-normalizer==3.1.0
+idna==3.4
+PyAudio==0.2.13
+pydub==0.25.1
+requests==2.28.2
+SpeechRecognition==3.10.0
+urllib3==1.26.15
