@@ -24,7 +24,7 @@ sudo apt-get install ffmpeg
 
 ## Running the script
 
-With the audio file in the folder of the project do:
+With the audio file in the folder of the project, run the commands:
 
 ```
 git clone https://github.com/yohandiaz/speech-recognition.git
