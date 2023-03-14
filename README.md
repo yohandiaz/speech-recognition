@@ -34,4 +34,4 @@ cd speech-recognition
 python audioToText.py
 ```
 
-Then insert the name of the audio file
+Then insert the name of the audio file.
