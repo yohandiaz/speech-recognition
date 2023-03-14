@@ -1,4 +1,6 @@
-# RPM BASED
+# Speech recognition app with Python
+
+## RPM BASED
 ```
 sudo yum install python3
 sudo yum install python3-pip
@@ -8,7 +10,7 @@ sudo yum install python3-devel portaudio-devel
 sudo dnf install ffmpeg
 ```
 
-# DEB BASED
+## DEB BASED
 ```
 sudo apt-get install python3
 sudo apt-get install python3-pip
@@ -25,5 +27,9 @@ sudo apt-get install ffmpeg
 With the audio file in the folder of the project do:
 
 ```
+git clone https://github.com/yohandiaz/speech-recognition.git
+
+cd speech-recognition
+
 python audioToText.py
 ```
