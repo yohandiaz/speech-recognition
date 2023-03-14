@@ -4,7 +4,7 @@ sudo yum install python3
 sudo yum install python3-pip
 sudo yum install python3-devel portaudio-devel
 
-// Maybe you will need to install RPM fusion repository if you haven't in order to be able to download this package
+// You will need to install RPM fusion repository to be able to download this package
 sudo dnf install ffmpeg
 ```
 
