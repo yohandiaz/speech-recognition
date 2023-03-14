@@ -1,4 +1,5 @@
 from pydub import AudioSegment
+import os
 
 def load_audio_file(file_path):
     # Get the file extension from the file path
@@ -8,16 +9,23 @@ def load_audio_file(file_path):
     supported_formats = ["mp3", "mp4", "wav", "ogg"]
 
     # If the file format is not supported, convert it to MP3 using Pydub
-    if file_extension not in supported_formats:
-        # Create a new file path with a .mp3 extension
-        mp3_path = file_path.rsplit(".", 1)[0] + ".mp3"
-        # Load the audio data from the original file
-        audio = AudioSegment.from_file(file_path, format=file_extension)
-        # Export the audio data to the new MP3 file using Pydub
-        audio.export(mp3_path, format="mp3")
-        # Update the file path and extension to the new MP3 file
-        file_path = mp3_path
-        file_extension = "mp3"
+    if file_extension in supported_formats:
+        return convert_to_wav(file_path)
+    else:
+        print("Format " + file_extension + "is not supported, used mp3 mp4 wav or ogg instead")
 
-    # Load the audio data from the file using Pydub
-    return AudioSegment.from_file(file_path, format=file_extension)
+def convert_to_wav(file_path):
+    """
+    Convierte un archivo de audio a formato wav utilizando la biblioteca pydub.
+    """
+    # Carga el archivo de audio utilizando la biblioteca pydub.
+    sound = AudioSegment.from_file(file_path)
+
+    # Define el nombre del archivo de salida.
+    wav_file = os.path.splitext(file_path)[0] + ".wav"
+
+    # Exporta el archivo de audio como formato wav.
+    sound.export(wav_file, format="wav")
+
+    return wav_file
+
