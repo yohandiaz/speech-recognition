@@ -5,6 +5,9 @@ def load_audio_file(file_path):
     # Get the file extension from the file path
     file_extension = file_path.split(".")[-1]
 
+    if(file_extension == "wav"):
+        return file_path
+
     # List of supported audio file formats
     supported_formats = ["mp3", "mp4", "wav", "ogg"]
 
