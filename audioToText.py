@@ -6,7 +6,7 @@ engine = sr.Recognizer()
 
 # read mp3 file
 
-audio_file_path = pathlib.Path(__file__).parent.resolve()
+audio_file_path = str(pathlib.Path(__file__).parent.resolve()) + "/"
 audio_file_path += input("Insert the name of the file: ")
 convertedFileName = fl.load_audio_file(audio_file_path)
 
