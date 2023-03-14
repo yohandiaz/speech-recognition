@@ -4,11 +4,6 @@ import pathlib
 import speech_recognition as sr
 engine = sr.Recognizer()
 
-audio_file_path = str(pathlib.Path(__file__).parent.resolve()) + "/"
-audio_file_path += input("Insert the name of the file: ")
-
-audioToText(audio_file_path)
-
 # read mp3 file
 def audioToText(file_path):
     
@@ -25,3 +20,8 @@ def audioToText(file_path):
     print(f'Text: {text}')
     txtFile = open('textRecognized.txt', 'a')
     txtFile.writelines(text)
+
+audio_file_path = str(pathlib.Path(__file__).parent.resolve()) + "/"
+audio_file_path += input("Insert the name of the file: ")
+
+audioToText(audio_file_path)
